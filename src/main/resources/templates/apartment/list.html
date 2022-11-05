@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR" th:include="templates/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <main th:fragment="conteudo">
+        <h1>Apartments</h1>
+        <table th:fragment="conteudo" class="table">
+            <thead>
+                <th>Id</th>
+                <th>Número da Porta</th>
+                <th>Quantidade de Quartos</th>
+                <th>Tipo</th>
+            </thead>
+            <tbody>
+                <tr th:each="apartment : ${apartments}">
+                    <td th:text="${apartment.id}"></td>
+                    <td th:text="${apartment.doorNumber}"></td>
+                    <td th:text="${apartment.roomCount}"></td>
+                    <td th:text="${apartment.type}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>
