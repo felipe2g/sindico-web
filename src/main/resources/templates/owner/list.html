@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR" th:include="templates/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <main th:fragment="conteudo">
+        <h1>Owner</h1>
+        <table th:fragment="conteudo" class="table">
+            <thead>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Telefone</th>
+            </thead>
+            <tbody>
+                <tr th:each="owner : ${owners}">
+                    <td th:text="${owner.owner_id}"></td>
+                    <td th:text="${owner.nome}"></td>
+                    <td th:text="${owner.phone}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>
