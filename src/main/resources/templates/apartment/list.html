@@ -16,9 +16,9 @@
             </thead>
             <tbody>
                 <tr th:each="apartment : ${apartments}">
-                    <td th:text="${apartment.id}"></td>
-                    <td th:text="${apartment.doorNumber}"></td>
-                    <td th:text="${apartment.roomCount}"></td>
+                    <td th:text="${apartment.apartment_id}"></td>
+                    <td th:text="${apartment.door_number}"></td>
+                    <td th:text="${apartment.room_count}"></td>
                     <td th:text="${apartment.type}"></td>
                 </tr>
             </tbody>

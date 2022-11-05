@@ -8,8 +8,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Apartment {
-    public Long id;
-    int doorNumber;
-    int roomCount;
+    public Long apartment_id;
+    int door_number;
+    int room_count;
     String type;
 }

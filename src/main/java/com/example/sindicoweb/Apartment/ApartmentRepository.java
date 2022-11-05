@@ -14,11 +14,11 @@ public class ApartmentRepository {
 
     public List<Apartment> findAll() {
          return jdbc.query(
-            "SELECT id, doorNumber, roomCount, type FROM apartments",
+            "SELECT apartment_id, door_number, room_count, type FROM apartments",
             (rs, rowNum) -> new Apartment(
-                    rs.getLong("id"),
-                    rs.getInt("doorNumber"),
-                    rs.getInt("roomCount"),
+                    rs.getLong("apartment_id"),
+                    rs.getInt("door_number"),
+                    rs.getInt("room_count"),
                     rs.getString("type")
             ));
     }
