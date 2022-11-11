@@ -7,7 +7,7 @@
 <body>
     <main th:fragment="conteudo">
         <h1>Owner</h1>
-        <table th:fragment="conteudo" class="table">
+        <table class="table">
             <thead>
                 <th>Id</th>
                 <th>Nome</th>
@@ -16,7 +16,7 @@
             <tbody>
                 <tr th:each="owner : ${owners}">
                     <td th:text="${owner.owner_id}"></td>
-                    <td th:text="${owner.nome}"></td>
+                    <td th:text="${owner.name}"></td>
                     <td th:text="${owner.phone}"></td>
                 </tr>
             </tbody>

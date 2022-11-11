@@ -1,5 +1,6 @@
 package com.example.sindicoweb.Apartment;
 
+import com.example.sindicoweb.Owner.Owner;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,4 +13,5 @@ public class Apartment {
     int door_number;
     int room_count;
     String type;
+    Owner owner;
 }

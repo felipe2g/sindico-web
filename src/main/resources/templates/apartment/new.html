@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR" th:include="templates/layout">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<main th:fragment="conteudo">
+  <h1>Criar apartamento</h1>
+  <form method="post" th:object="${apartment}" action="new">
+    <div class="form-group">
+      <label for="inputNumber">Número</label>
+      <input
+        type="number"
+        class="form-control"
+        id="inputNumber"
+        placeholder="Número"
+        th:field="*{door_number}"
+      >
+
+      <label for="inputRoomCount">Quantidade de quartos</label>
+      <input
+              type="number"
+              class="form-control"
+              id="inputRoomCount"
+              placeholder="Quantidade de quartos"
+              th:field="*{room_count}"
+      >
+
+      <label for="inputType">Tipo</label>
+      <input
+        type="text"
+        class="form-control"
+        id="inputType"
+        placeholder="Tipo"
+        th:field="*{type}"
+      >
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</main>
+</body>
+</html>
